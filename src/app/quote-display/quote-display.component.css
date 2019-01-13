@@ -1,3 +1,6 @@
+.middle{
+  width: 80%;
+}
 .content{
   min-height: 350px;
   margin: 20px;
@@ -8,7 +11,9 @@
   border-color: #FAF0E6;
 }
 .sample{
-  margin-left: 50px;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding: 20px;
 }
 .logo {
   height: 100px;
