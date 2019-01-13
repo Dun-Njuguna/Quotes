@@ -1,20 +1,22 @@
 <div class="container-fluid middle">
-
   <div class="row content justify-content-center">
-    <div class="col-md-5 sample" *ngFor='let quote of userQuotes;let i = index'>
+    <div class="col-md-5 sample">
       <img class="logo" src="../assets/quote-logo.jpg" alt="">
       <p>
-        “I am no bird; and no net ensnares me: I am a free human being with an independent will.”
-        ― Charlotte Brontë, Jane Eyre
-        <app-goal-details *ngIf="quote.showName" [goal]='goal'></app-goal-details>
-      </p>
-      <button type="button" name="button">Detail</button>
+        “I am no bird; and no net ensnares me: I am a free human being with an independent will.”</p>
+      <ul>
+        <div *ngFor='let goal of userQuotes;let i = index'>
+          <button type="button" (click)='toogleDetails(i)'>Toogle Details</button>
+          <app-details *ngIf="goal.showName" [goal]='userQuotes'></app-details>
+        </div>
+        <app-details></app-details>
+      </ul>
     </div>
+
     <div class="col-md-5 sample">
       <img class="logo" src="../assets/quote-logo.jpg" alt="">
       <p>“I am not an angel,' I asserted; 'and I will not be one till I die: I will be myself. Mr. Rochester, you must neither expect nor exact anything celestial of me - for you will not get it, any more than I shall get it of you: which I do not
-        at all anticipate.”
-        ― Charlotte Brontë, Jane Eyre</p>
+        at all anticipate.”</p>
       <button type="button" name="button">Detail</button>
     </div>
   </div>
@@ -29,6 +31,8 @@
       </p>
       <button type="button" name="button">Detail</button>
     </div>
+
+
     <div class="col-md-5 sample">
       <img class="logo" src="../assets/quote-logo.jpg" alt="">
       <p>
@@ -66,7 +70,34 @@
       <app-quote-details></app-quote-details>
     </div>
     <div class="col-md-5 display">
-      <app-quote-form (addsQuote) = "addQuote($event)"></app-quote-form>
+      <h4>Create a new quote</h4><br>
+      <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" required class="form-control" id="name" [(ngModel)]="allNewQuote.name" name="name" #name="ngModel">
+          <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            <p> Filled is Required</p>
+          </div>
+          display{{allNewQuote.name}}
+        </div>
+        <div class="form-group">
+          <label for="name">Quote Author</label>
+          <input type="text" required class="form-control" id="author" [(ngModel)]="allNewQuote.author" name="author" #author="ngModel">
+          <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+            <p> Filled is Required</p>
+          </div>
+          display{{allNewQuote.author}}
+        </div>
+        <div class="form-group">
+          <label for="description">Quote</label>
+          <textarea class="form-control" id="quote" rows="4" [(ngModel)]="allNewQuote.quote" name="quote" required #quote="ngModel"></textarea>
+          <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+            <p> Filled is Required</p>
+          </div>
+          display{{allNewQuote.quote}}
+        </div>
+        <button type="button" name="button" class="btn btn-success btn-lg">Submit</button>
+      </form>
     </div>
   </div>
 </div>
