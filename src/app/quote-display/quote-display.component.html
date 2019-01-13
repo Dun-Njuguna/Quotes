@@ -65,22 +65,29 @@
     </div>
     <div class="col-md-5 display">
       <h4>Create a new quote</h4><br>
-      <form>
+      <form (ngSubmit)='submitQuote()' #goalForm='ngForm'>
         <div class="form-group">
           <label for="name">Your Name</label>
-          <input type="text" required class="form-control" id="name">
+          <input type="text" required class="form-control" id="name"
+          [(ngModel)]="allNewQuote.name" name="name" #name="ngModel">
+          <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                   <p> Filled is Required</p>
+          </div>
         </div>
         <div class="form-group">
           <label for="name">Quote Author</label>
-          <input type="text" required class="form-control" id="author">
+          <input type="text" required class="form-control" id="author"
+          [(ngModel)]="allNewQuote.author" name="author">
         </div>
         <div class="form-group">
           <label for="description">Quote</label>
-          <textarea class="form-control" id="quote" rows="4" required></textarea>
+          <textarea class="form-control" id="quote" rows="4"
+          [(ngModel)]="allNewQuote.quote" name="quote" required></textarea>
         </div>
         <div class="form-group">
           <label for="name">Description</label>
-          <textarea class="form-control" name="name" id="description" rows="4" required></textarea>
+          <textarea class="form-control" name="name" id="description" rows="4" required
+          [(ngModel)]="allNewQuote.description" name="description"></textarea>
         </div>
         <button type="button" name="button">Submit</button>
       </form>
