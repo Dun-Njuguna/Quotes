@@ -7,26 +7,12 @@ import {Quotes} from '../quotes';
 })
 export class QuoteDisplayComponent implements OnInit {
 
-  userQuotes:  any[];
-  allNewQuote = new Quotes(0,"","","","");
-  @Output() addQuote = new EventEmitter<Quotes>();
+  
   constructor() {
-    this.userQuotes = [
-      new Quotes(),
-    ]
    }
-   submitQuote(){
-     this.addQuote.emit(this.allNewQuote);
-   }
-   addQuote(newQuote){
-     let userLength = this.userQuotes.length;
-     newQuote.id = userLength+1;
-     // newQuote.name = "dun";
-     // newQuote.auther = "dun";
-     // newQuote.quote= "dun";
-     // newQuote.description = "dun";
-     this.userQuotes.push(newQuote);
-   }
+
+
+
   ngOnInit() {
   }
 
