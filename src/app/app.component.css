@@ -1,16 +1,36 @@
 .page-header {
   text-align: center;
   padding: 20px;
+  padding-top: 60px;
+  min-height: 10em;
+  background-color: #FAF0E6;
 }
 
 .jumbotron {
   margin: 5px;
+  min-height: 500px;
 }
 
 .well {
-  background-color: red;
+  background-color: #FAF0E6;
   text-align: center;
   padding: 20px;
   margin-left: 20px;
   margin-right: 20px;
+}
+.footer{
+  background-color: #FAF0E6;
+  padding: 20PX;
+  width: 100%;
+}
+.outterfooter{
+  background-color: #FAF0E6;
+  margin-top: 20px;
+}
+.side{
+  text-align: center;
+  margin: 10PX;
+  padding:20px;
+  padding-top: 40px;
+  background-color: #FFFFFF;
 }
