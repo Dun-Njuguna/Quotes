@@ -9,15 +9,15 @@ import {Quotes} from '../quotes';
 export class QuoteDisplayComponent implements OnInit {
 
 
-    userQuotes: any[];
+    userQuotes = [
+      new Quotes(1,"dun","Charlotte Brontë, Jane Eyre","“I am no bird; and no net ensnares me: I am a free human being with an independent will.”"),
+      new Quotes(2,"duncan","Charlotte Brontë, Jane Eyre","")
+    ]
+
     allNewQuote = new Quotes(0,"","","");
     @Output() addsQuote = new EventEmitter <Quotes>();
     constructor() {
-      this.userQuotes = [
-        new Quotes(1,"dun","Charlotte Brontë, Jane Eyre","“I am no bird; and no net ensnares me: I am a free human being with an independent will.”"),
-        new Quotes(2,"dun","Charlotte Brontë, Jane Eyre","")
 
-      ]
     }
     submitQuote() {
       this.addsQuote.emit(this.allNewQuote);

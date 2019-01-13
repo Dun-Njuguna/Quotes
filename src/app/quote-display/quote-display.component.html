@@ -1,65 +1,25 @@
-<div class="container-fluid middle">
-  <div class="row content justify-content-center">
+<div class="container middle">
+  <div  *ngFor='let goal of userQuotes;let i = index' class="row content justify-content-center">
     <div class="col-md-5 sample">
       <img class="logo" src="../assets/quote-logo.jpg" alt="">
-      <p>
-        “I am no bird; and no net ensnares me: I am a free human being with an independent will.”</p>
-      <ul>
-        <div *ngFor='let goal of userQuotes;let i = index'>
-          <button type="button" (click)='toogleDetails(i)'>Toogle Details</button>
-          <app-details *ngIf="goal.showName" [goal]='userQuotes'></app-details>
+      <p>{{goal.quote}}</p>
+        <div>
+          <ul>
+            <button (click)='toogleDetails(i)'>Toogle Details</button>
+            <app-details *ngIf="goal.showName" [goal]='goal'></app-details>
+          </ul>
         </div>
-        <app-details></app-details>
-      </ul>
     </div>
 
     <div class="col-md-5 sample">
       <img class="logo" src="../assets/quote-logo.jpg" alt="">
-      <p>“I am not an angel,' I asserted; 'and I will not be one till I die: I will be myself. Mr. Rochester, you must neither expect nor exact anything celestial of me - for you will not get it, any more than I shall get it of you: which I do not
-        at all anticipate.”</p>
-      <button type="button" name="button">Detail</button>
-    </div>
-  </div>
-  <br>
-  <br>
-  <div class="row content justify-content-center">
-    <div class="col-md-5 sample">
-      <img class="logo" src="../assets/quote-logo.jpg" alt="">
-      <p>
-        “If you spent your life concentrating on what everyone else thought of you, would you forget who you really were? What if the face you showed the world turned out to be a mask... with nothing beneath it?”
-        ― Jodi Picoult, Nineteen Minutes
-      </p>
-      <button type="button" name="button">Detail</button>
-    </div>
-
-
-    <div class="col-md-5 sample">
-      <img class="logo" src="../assets/quote-logo.jpg" alt="">
-      <p>
-        “I am not an angel," I asserted; "and I will not be one till I die: I will be myself.”
-        ― Charlotte Brontë, Jane Eyre
-      </p>
-      <button type="button" name="button">Detail</button>
-    </div>
-  </div>
-  <br>
-  <br>
-  <div class="row content justify-content-center">
-    <div class="col-md-5 sample">
-      <img class="logo" src="../assets/quote-logo.jpg" alt="">
-      <p>
-        “Protect your good image from the eyes of negative viewers, who may look at your good appearance with an ugly fiendish eye, and ruin your positive qualities with their chemical infested tongues.”
-        ― Michael Bassey Johnson
-      </p>
-      <button type="button" name="button">Detail</button>
-    </div>
-    <div class="col-md-5 sample">
-      <img class="logo" src="../assets/quote-logo.jpg" alt="">
-      <p>
-        “I have laughed, in bitterness and agony of heart, at the contrast between what I seem and what I am!”
-        ― Nathaniel Hawthorne, The Scarlet Letter
-      </p>
-      <button type="button" name="button">Detail</button>
+      <p>{{goal.quote}}</p>
+      <div>
+        <ul>
+          <button (click)='toogleDetails(i)'>Toogle Details</button>
+          <app-details *ngIf="goal.showName" [goal]='goal'></app-details>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
