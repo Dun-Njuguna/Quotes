@@ -1,0 +1,16 @@
+.page-header {
+  text-align: center;
+  padding: 20px;
+}
+
+.jumbotron {
+  margin: 5px;
+}
+
+.well {
+  background-color: red;
+  text-align: center;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
