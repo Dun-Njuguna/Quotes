@@ -3,8 +3,6 @@
 
 ----------------------------------------------------------------------
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
-
 ## Project Objectives
 The objective of this project is to create an application, that lets users view,add,delete, like or dislike a quote.
 
@@ -23,6 +21,10 @@ It is important that when collaborating or doing an independent project to be ab
 ### 3.Angular.
 To use angular elements develop the applications user interface.
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
+
+-----------------------------------------------------------------------------
+
 ## Behaviour driven Development (BDD)
 |#User inputs   |  #Example outputs |         
 |---------------|-------------------|
@@ -30,6 +32,7 @@ To use angular elements develop the applications user interface.
 | User up votes or down votes              | Vote is recorded                 |
 | User deletes a quote              | Quote is deleted                  |
 
+---------------------------------------------------------------------------------
 
 ## Development server
 
