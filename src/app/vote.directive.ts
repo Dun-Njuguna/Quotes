@@ -5,6 +5,8 @@ import { Directive } from '@angular/core';
 })
 export class VoteDirective {
 
-  constructor() { }
+  constructor(private elem:ElementRef) {
+    this.elem.nativeElement.style.color='#FAF0E6';
+   }
 
 }
