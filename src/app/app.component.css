@@ -8,7 +8,12 @@
 
 .jumbotron {
   margin: 5px;
-  min-height: 500px;
+  min-height: 600px;
+  background-color: #AFA395;
+  background-image: url('../assets/alexander-bracken-742420-unsplash.jpg');
+  background-position:center;
+  background-size:contain;
+  background-repeat: no-repeat;
 }
 
 .well {

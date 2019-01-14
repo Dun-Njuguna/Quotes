@@ -10,7 +10,7 @@ export class TimePipe implements PipeTransform {
     let todayTime: any =  new Date(initial.getTime());
     let difference =Math.abs(value-todayTime )
 
-    let seconds = today*0.001;
+    let seconds = todayTime*0.001;
     var counter = seconds/86400;
     // if (counter >= 1 && value > todayTime){
     //      return counter;
