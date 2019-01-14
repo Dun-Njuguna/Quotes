@@ -10,6 +10,13 @@
             <app-details *ngIf="goal.showName" [goal]='goal'></app-details>
           </ul>
         </div>
+        <div>
+          <button (click)="upVote()">Upvote</button>
+          <span>Total:{{count}}</span>
+          <br>
+          <button (click)="downVote()">Downvote</button>
+          <span>Total:{{coun}}</span>
+        </div>
     </div>
   </div>
 </div>
