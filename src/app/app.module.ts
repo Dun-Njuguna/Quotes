@@ -8,7 +8,8 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import {FormsModule} from '@angular/forms';
 import { DetailsComponent } from './details/details.component';
 import { DetailsFormComponent } from './details-form/details-form.component';
-
+import { TimePipe } from './time.pipe';
+import { VoteDirective } from './vote.directive';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,8 @@ import { DetailsFormComponent } from './details-form/details-form.component';
     QuoteDetailsComponent,
     DetailsComponent,
     DetailsFormComponent,
+    TimePipe,
+    VoteDirective,
 
   ],
   imports: [
