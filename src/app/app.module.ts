@@ -7,6 +7,7 @@ import { QuoteDisplayComponent } from './quote-display/quote-display.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import {FormsModule} from '@angular/forms';
 import { DetailsComponent } from './details/details.component';
+import { DetailsFormComponent } from './details-form/details-form.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { DetailsComponent } from './details/details.component';
     QuoteDisplayComponent,
     QuoteDetailsComponent,
     DetailsComponent,
+    DetailsFormComponent,
 
   ],
   imports: [

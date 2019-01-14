@@ -1,4 +1,4 @@
-import { Component, OnInit, Output,EventEmitter  } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter,Input } from '@angular/core';
 import {Quotes} from '../quotes';
 
 @Component({
@@ -6,27 +6,22 @@ import {Quotes} from '../quotes';
   templateUrl: './quote-display.component.html',
   styleUrls: ['./quote-display.component.css']
 })
+
+
 export class QuoteDisplayComponent implements OnInit {
 
-
-    userQuotes = [
-      new Quotes(1,"dun","Charlotte Brontë, Jane Eyre","“I am no bird; and no net ensnares me: I am a free human being with an independent will.”"),
-      new Quotes(2,"duncan","Charlotte Brontë, Jane Eyre","")
-    ]
-
-    allNewQuote = new Quotes(0,"","","");
-    @Output() addsQuote = new EventEmitter <Quotes>();
+    userQuotes: any[];
     constructor() {
-
+        this.userQuotes= [
+          new Quotes(1,"dun","Charlotte Brontë Jane Eyre","“I am no bird; and no net ensnares me: I am a free human being with an independent will.”"),
+          new Quotes(2,"duncan","Jane Eyre","ghbnjmk,., mknjbhvgfcvgbhnjmk,l.;,lmknj")
+        ]
     }
-    submitQuote() {
-      this.addsQuote.emit(this.allNewQuote);
-    }
-
     addQuote(newQuote) {
       let userLength = this.userQuotes.length;
-      newQuote.id = userLength + 1;
+      newQuote.id = userLength+1;
       this.userQuotes.push(newQuote);
+      console.log(this.userQuotes);
     }
 
     toogleDetails(index){
