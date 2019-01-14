@@ -1,26 +1,27 @@
 
-<div class="container middle">
+<div  class="container middle">
   <div  *ngFor='let goal of userQuotes;let i = index' class="row content justify-content-center">
     <div class="col-md-12 sample">
       <img class="logo" src="../assets/quote-logo.jpg" alt="">
       <p>{{goal.quote}}</p>
-      <p></p>
         <div>
           <ul>
             <button (click)='toogleDetails(i)'>Toogle Details</button>
             <app-details *ngIf="goal.showName" [goal]='goal'></app-details>
           </ul>
         </div>
-        <div>
-          <button (click)="upVote()">Upvote</button>
-          <span>Total:{{count}}</span>
+        <div *ngIf="goal.showName">
+          <button (click)="upVote(i)">Upvote</button>
+          <span>Total:{{goal.vote}}</span>
           <br>
-          <button (click)="downVote()">Downvote</button>
-          <span>Total:{{coun}}</span>
+          <button (click)="downVote(i)">Downvote</button>
+          <span>Total:{{goal.dvote}}</span><br>
+          <button (click) = 'goalDelete(i)'> Delete Goal </button>
         </div>
     </div>
   </div>
 </div>
+
 
 <div class="container-fluid">
   <div class="row justify-content-center">
@@ -28,7 +29,8 @@
       <app-quote-details></app-quote-details>
     </div>
     <div class="col-md-5 display">
-      <app-details-form (addsQuote) = "addQuote($event)"></app-details-form>
+      <app-details-form (addsQuote) = "addQuote($event) " ></app-details-form>
   </div>
 
+</div>
 </div>
