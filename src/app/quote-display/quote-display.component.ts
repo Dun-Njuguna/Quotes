@@ -15,7 +15,7 @@ export class QuoteDisplayComponent implements OnInit {
   constructor() {
     this.userQuotes = [
       new Quotes(1, "dun", "Charlotte Brontë Jane Eyre", "“I am no bird; and no net ensnares me: I am a free human being with an independent will.”", 0, 0),
-      new Quotes(2, "duncan", "Jane Eyre", "ghbnjmk,., mknjbhvgfcvgbhnjmk,l.;,lmknj", 0, 0),
+      new Quotes(2, "duncan", " Socrates", "“The only true wisdom is in knowing you know nothing.”", 0, 0),
     ]
   }
   addQuote(newQuote) {
